@@ -1,11 +1,11 @@
 <?php
 
-require 'TwistOAuth.phar';
-// $consumer_key        = 'xxxxxxxxxxx';
-// $consumer_secret     = 'xxxxxxxxxxx';
-// $access_token        = 'xxxxxxxxxxx';
-// $access_token_secret = 'xxxxxxxxxxx';
-// $connection = new TwistOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+require 'TwistOAuth/build/TwistOAuth.phar';
+$consumer_key        = 'G';
+$consumer_secret     = 'M';
+$access_token        = 'r';
+$access_token_secret = '9';
+$connection = new TwistOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+var_dump($connection);
 
-echo ADMIN_USER_NAME;
 echo "Hello, KABUWATA!?";
