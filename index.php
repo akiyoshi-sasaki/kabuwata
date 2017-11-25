@@ -3,6 +3,8 @@
 require '.twitter.php';
 require 'TwistOAuth/build/TwistOAuth.phar';
 
+var_dump($_POST);
+
 $consumer_key        = TwitterApi::CONSUMER_TOKEN;
 $consumer_secret     = TwitterApi::CONSUMER_SECRET;
 $access_token        = TwitterApi::ACCESS_TOKEN;
