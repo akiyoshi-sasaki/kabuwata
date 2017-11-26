@@ -5852,7 +5852,7 @@ textarea.form-control {
 }
 
 .presentation-title {
-  font-size: 4.5em;
+  font-size: 400%;
   font-weight: 700;
   margin: 0;
   color: #FFFFFF;
@@ -5862,7 +5862,7 @@ textarea.form-control {
   background: -ms-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
   background: linear-gradient(to bottom, #FFFFFF 35%, #4e6773 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /*-webkit-text-fill-color: transparent;*/
 }
 
 .presentation-subtitle {
@@ -5904,7 +5904,7 @@ textarea.form-control {
 }
 
 .page-header .content-center {
-  margin-top: 85px;
+  margin-top: 200px;
 }
 
 .moving-clouds {
