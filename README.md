@@ -88,4 +88,7 @@ $ sudo vi /etc/php/7.0/cli/php.ini
 //`extension=php_openssl.dll`のコメントアウトを外す
 $ sudo apt-get install php-curl
 ```
- 
+
+## ドメイン
+
+https://senku-sya.com/2017/domain/ 
