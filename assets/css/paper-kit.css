@@ -5931,3 +5931,8 @@ textarea.form-control {
 .following img {
   max-width: 70px;
 }
+
+.form-date-dropdwon {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
