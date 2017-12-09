@@ -3,8 +3,6 @@
 require '.twitter.php';
 require 'TwistOAuth/build/TwistOAuth.phar';
 
-var_dump($_POST);
-
 $consumer_key    = TwitterApi::CONSUMER_KEY;
 $consumer_secret = TwitterApi::CONSUMER_SECRET;
 $access_token    = TwitterApi::ACCESS_TOKEN;
@@ -14,7 +12,11 @@ $connection = new TwistOAuth($consumer_key, $consumer_secret, $access_token, $ac
 if (isset($_POST['keyword'])) {
         $keyword = str_replace(' ', '', $_POST['keyword']);
         $count = (isset($_POST['count'])) ? $_POST['count'] : 10;
-				$until = (isset($_POST['until'])) ? $_POST['until'] : date('Y-m-d');
+
+				$year = (isset($_POST['year'])) ? $_POST['year'] : date('Y');
+				$month = (isset($_POST['month'])) ? $_POST['month'] : date('m');
+				$day = (isset($_POST['day'])) ? $_POST['day'] : date('d');
+				$until = $year . '-' . $month . '-' . $day;
 
 	// キーワードによるツイート検索
 	$tweets_params = [
