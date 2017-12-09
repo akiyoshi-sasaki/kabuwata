@@ -17,16 +17,20 @@ if (isset($_POST['keyword'])) {
 				$month = (isset($_POST['month'])) ? $_POST['month'] : date('m');
 				$day = (isset($_POST['day'])) ? $_POST['day'] : date('d');
 				$until = $year . '-' . $month . '-' . $day;
-
+				$conjunction = (isset($_POST['conjunction'])) ? $_POST['conjunction'] : 'AND';
 	// キーワードによるツイート検索
 	$tweets_params = [
-		'q' => str_replace(',', ' OR ', $keyword),
+		'q' => '"' . str_replace(',', '" ' . $conjunction . ' "', $keyword) . '"',
 		'count' => $count,
 		'lang' => 'ja',
 		'result_type' => 'mixed',
-		'until' => $until
+		//'since' => $until . '_00:00:00_JST',
+		'until' => $until . '_23:59:59_JST'
 	];
 	$tweets        = $connection->get('search/tweets', $tweets_params)->statuses;
+
+	var_dump($tweets_params);
+//	var_dump($tweets);
 
 	foreach($tweets as $tweet){
 		echo '名前:' . $tweet->user->name . "<br>";
