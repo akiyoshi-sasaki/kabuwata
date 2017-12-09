@@ -22,7 +22,7 @@ if (isset($_POST['keyword'])) {
 		'count' => $count,
 		'lang' => 'ja',
 		'result_type' => 'mixed',
-		'until' => $until;
+		'until' => $until
 	];
 	$tweets        = $connection->get('search/tweets', $tweets_params)->statuses;
 
